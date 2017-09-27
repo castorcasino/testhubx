@@ -15,8 +15,13 @@ import java.util.List;
 
 public class StartUpRunner extends JUnitStories{
 
+    @Override
     protected List<String> storyPaths() {
+        return null;
+    }
 
+    /*
+    protected List<String> storyPaths() {
         String storySourcePath = "src/test/resources/";
         List<String> includesPath = new ArrayList<>();
         List<String> excludesPath = new ArrayList<>();
@@ -27,6 +32,7 @@ public class StartUpRunner extends JUnitStories{
         StoryFinder storyFinder = new StoryFinder();
         return storyFinder.findPaths(storySourcePath, includesPath, excludesPath);
     }
+    */
 
     @Override
     public Configuration configuration() {
@@ -41,4 +47,5 @@ public class StartUpRunner extends JUnitStories{
                 new StartUpSteps()
         );
     }
+
 }
